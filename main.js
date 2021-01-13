@@ -4,8 +4,7 @@ $('.next i').click(function () {
   currentImg.removeClass('active');
 
   if(currentImg.hasClass('last')) {
-    var firstImg = $('.images img.first');
-    firstImg.addClass('active');
+    $('.images img.first').addClass('active');
   } else {
     currentImg.next().addClass('active');
   }
@@ -14,8 +13,7 @@ $('.next i').click(function () {
   currentCircle.removeClass('active');
 
   if(currentCircle.hasClass('last')) {
-    var firstCircle = $('.nav i.first');
-    firstCircle.addClass('active');
+    $('.nav i.first').addClass('active');
   } else {
     currentCircle.next().addClass('active');
   }
@@ -28,19 +26,17 @@ $('.prev i').click(function () {
   currentImg.removeClass('active');
 
   if(currentImg.hasClass('first')) {
-    var lastImg = $('.images img.last');
-    lastImg.addClass('active');
+    $('.images img.last').addClass('active');
   } else {
-    currentImg.removeClass('active').prev().addClass('active');
+    currentImg.prev().addClass('active');
   }
 
   var currentCircle = $('.nav i.active');
   currentCircle.removeClass('active');
 
   if(currentCircle.hasClass('first')) {
-    var lastCircle = $('.nav i.last');
-    lastCircle.addClass('active');
+    $('.nav i.last').addClass('active');
   } else {
-    currentCircle.removeClass('active').prev().addClass('active');
+    currentCircle.prev().addClass('active');
   }
 })
