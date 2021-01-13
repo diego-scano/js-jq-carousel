@@ -7,7 +7,7 @@ $('.next i').click(function () {
     var firstImg = $('.images img.first');
     firstImg.addClass('active');
   } else {
-    currentImg.removeClass('active').next().addClass('active');
+    currentImg.next().addClass('active');
   }
 
   var currentCircle = $('.nav i.active');
@@ -17,7 +17,7 @@ $('.next i').click(function () {
     var firstCircle = $('.nav i.first');
     firstCircle.addClass('active');
   } else {
-    currentCircle.removeClass('active').next().addClass('active');
+    currentCircle.next().addClass('active');
   }
 })
 
